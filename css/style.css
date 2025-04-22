@@ -1,3 +1,13 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body, html {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* impede rolagem lateral */
+  }
+
 .intro-content{
     position: relative;
     /*top: -7rem;*/
@@ -30,6 +40,10 @@
     text-align: center;
 }
 
+.top3-content h2 {
+    font-size: 5rem;
+}
+
 .grid-one-content {
   display: flex;
   flex-flow: column wrap;
@@ -58,7 +72,7 @@
 .grid h3 {
     font-size: 3rem;
     position: relative;
-    padding-left: 5rem;
+    padding-left: 8rem;
     padding-bottom: 3rem;
 }
 
@@ -66,10 +80,10 @@
     counter-increment: grid-counter;
     content: counter(grid-counter);
     position: absolute;
-    font-size: 6rem;
+    font-size: 3rem;
     font-style: italic;
-    top:-4rem;
-    left: 0.5rem;
+    top:-1rem;
+    left: 0rem;
     transform: rotate(5deg);
 }
 
@@ -237,6 +251,8 @@
       background-color: #fff;
       z-index: 1000;
       padding: 1rem;
+      
+      
     }
   
     .menu nav ul {
@@ -258,25 +274,25 @@
     display: none;
 }
 
-
 .close-menu-label::after {
     content: '☰';
     position: fixed;
-    z-index: 2;
-    top: 2rem;
-    right: 2rem;
+    z-index: 2000;
+    top: 1rem;
+    right: 1rem;
     background: var(--primary-color);
     color: var(--white);
-    font-size: 3rem;
+    font-size: 2.5rem;
     line-height: 3rem;
     width: 3rem;
     height: 3rem;
     text-align: center;
     padding: 0.5rem;
-}
+    border-radius: 5px;
+  }  
 /* × */
 .close-menu:checked~.menu{
-    display: block;
+    display: flex;
 }
 
 .close-menu:checked~.close-menu-label::after{
@@ -286,3 +302,29 @@
 .menu-spacing {
     display: none;
 }
+
+@media (max-width: 800px) {
+    .grid h3 {
+      font-size: 1.5rem;
+      padding-left: 2rem;
+      padding-bottom: 1rem;
+    }
+  
+    .grid p {
+      font-size: 1rem;
+      line-height: 1.5;
+      padding: 0 1rem;
+      text-align: justify;
+    }
+  
+    .grid-main-heading {
+      font-size: 2rem;
+      text-align: center;
+    }
+  
+    .grid-description {
+      font-size: 1rem;
+      text-align: center;
+      padding: 0 1rem 2rem;
+    }
+  }
